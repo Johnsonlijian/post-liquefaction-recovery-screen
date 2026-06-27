@@ -1,0 +1,63 @@
+# Reproducible Runbook
+
+## Environment
+
+Tested with Python 3.11 on Windows. Install the Python dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## External data placement
+
+This repository includes derived outputs and a small coordinate bridge table. It does not redistribute large or third-party inputs.
+
+Place external inputs as follows when rerunning the full pipeline:
+
+```text
+data/
+  canterbury_cptu.parquet
+  ecan_mapped_liquefaction_sept2010.geojson
+  ecan_mapped_liquefaction_feb2011.geojson
+  parquet_coord_bridge.csv
+  raw/
+    public_demand_manifestation_cache_2026-06-08/
+  processed/
+    nzgd_profile_parse_2026-06-08/
+```
+
+Required public sources and access notes are listed in `DATASETS_AND_LINKS.csv`.
+
+## Run order
+
+The final open-data field test is represented by:
+
+```bash
+python analysis/mod07_field_scale_density_paradox.py
+python analysis/mod08_LSN_controlled_test.py
+python analysis/mod09_buffered_validated_test.py
+python analysis/fig_converged.py
+python analysis/graphical_abstract.py
+```
+
+Earlier diagnostic modules (`mod01` to `mod06` and `eda*`) document the development chain and require additional processed repeat-CPT inputs under `data/processed/nzgd_profile_parse_2026-06-08/`. Their derived output tables are included in `outputs/` for auditability, but their raw processed inputs are not redistributed.
+
+## Expected outputs
+
+- `outputs/mod07_site_table.csv`
+- `outputs/mod08_site_table.csv`
+- `outputs/mod09_site_table.csv`
+- `outputs/mod09_SUMMARY.md`
+- `figures/Fig1_converged.pdf`
+- `figures/Fig1_converged.png`
+- `figures/GraphicalAbstract.pdf`
+- `figures/GraphicalAbstract.png`
+
+## Reproducibility notes
+
+- Random sampling is not used in the final deterministic modules.
+- Coordinate and manifestation joins use public identifiers and fixed tolerance choices described in the scripts.
+- USGS and public ArcGIS services can change URL structure or service metadata; if a live source has moved, update `DATASETS_AND_LINKS.csv` and rerun the relevant data-fetch step without changing the derived-output filenames.
+- Repository DOI is not assigned in this source tree. Mint it from a tagged GitHub release through Zenodo or another archive.

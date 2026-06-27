@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or derived outputs, please cite this repository and the associated manuscript/data record."
+title: "Post-liquefaction recovery screen"
+version: "0.1.0"
+date-released: 2026-06-27
+repository-code: "https://github.com/Johnsonlijian/post-liquefaction-recovery-screen"
+license: MIT
+authors:
+  - family-names: REN
+    given-names: Lijian
+    email: renlijian@imut.edu.cn
+    orcid: "https://orcid.org/0000-0003-1629-4368"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20839217"
+    description: "Related input CPTu dataset DOI; not the code repository DOI."

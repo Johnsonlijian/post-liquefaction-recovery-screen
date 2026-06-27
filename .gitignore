@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.log
+*.aux
+*.out
+*.blg
+*.bbl
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Third-party or large input data are not redistributed in this repository.
+data/canterbury_cptu.parquet
+data/ecan_mapped_liquefaction_*.geojson
+data/raw/
+data/processed/
+
+# Active submission material is deliberately excluded.
+submission_clean/
+rounds/
+logs/
+MANUSCRIPT*
+Cover_Letter*
+EG_R39d*

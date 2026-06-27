@@ -1,0 +1,4 @@
+radius_m,clusters_total,clusters_ge2dates,clusters_ge3dates,clusters_spanning_event,investigations_in_multidate_clusters
+2.0,30374,431,36,32,1017
+5.0,29807,730,61,83,1775
+10.0,28060,1487,179,228,3821
