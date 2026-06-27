@@ -38,7 +38,8 @@ The final open-data field test is represented by:
 python analysis/mod07_field_scale_density_paradox.py
 python analysis/mod08_LSN_controlled_test.py
 python analysis/mod09_buffered_validated_test.py
-python analysis/fig_converged.py
+python analysis/fig1_mechanism.py
+python analysis/fig2_evidence.py
 python analysis/graphical_abstract.py
 ```
 
@@ -50,8 +51,10 @@ Earlier diagnostic modules (`mod01` to `mod06` and `eda*`) document the developm
 - `outputs/mod08_site_table.csv`
 - `outputs/mod09_site_table.csv`
 - `outputs/mod09_SUMMARY.md`
-- `figures/Fig1_converged.pdf`
-- `figures/Fig1_converged.png`
+- `figures/Fig1_mechanism.pdf`
+- `figures/Fig1_mechanism.png`
+- `figures/Fig2_evidence.pdf`
+- `figures/Fig2_evidence.png`
 - `figures/GraphicalAbstract.pdf`
 - `figures/GraphicalAbstract.png`
 

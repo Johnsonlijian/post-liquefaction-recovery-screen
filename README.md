@@ -33,11 +33,12 @@ Mapped liquefaction polygons and USGS ShakeMap products are public sources but a
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python analysis/fig_converged.py
+python analysis/fig1_mechanism.py
+python analysis/fig2_evidence.py
 python analysis/graphical_abstract.py
 ```
 
-The figure scripts above regenerate the included figure exports from fixed values and derived outputs. Full analytical reruns require the external data listed in `DATASETS_AND_LINKS.csv`.
+The figure scripts above regenerate the included submitted figure exports from fixed values and derived outputs. Full analytical reruns require the external data listed in `DATASETS_AND_LINKS.csv`.
 
 ## Citation
 
