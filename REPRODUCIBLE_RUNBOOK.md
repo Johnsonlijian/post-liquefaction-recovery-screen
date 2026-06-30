@@ -41,9 +41,12 @@ python analysis/mod09_buffered_validated_test.py
 python analysis/fig1_mechanism.py
 python analysis/fig2_evidence.py
 python analysis/graphical_abstract.py
+python opensees_campaign/fig_simulation.py
 ```
 
 Earlier diagnostic modules (`mod01` to `mod06` and `eda*`) document the development chain and require additional processed repeat-CPT inputs under `data/processed/nzgd_profile_parse_2026-06-08/`. Their derived output tables are included in `outputs/` for auditability, but their raw processed inputs are not redistributed.
+
+The effective-stress simulation support files are in `opensees_campaign/`. The included small CSV, JSON, and NumPy files are derived outputs used by `fig_simulation.py` to regenerate the manuscript simulation figure. Re-running the nonlinear PM4Sand/PDMY02 sweeps requires `openseespy` and is separated from ordinary figure regeneration.
 
 ## Expected outputs
 
@@ -57,10 +60,12 @@ Earlier diagnostic modules (`mod01` to `mod06` and `eda*`) document the developm
 - `figures/Fig2_evidence.png`
 - `figures/GraphicalAbstract.pdf`
 - `figures/GraphicalAbstract.png`
+- `opensees_campaign/Fig_simulation.pdf`
+- `opensees_campaign/Fig_simulation.png`
 
 ## Reproducibility notes
 
 - Random sampling is not used in the final deterministic modules.
 - Coordinate and manifestation joins use public identifiers and fixed tolerance choices described in the scripts.
 - USGS and public ArcGIS services can change URL structure or service metadata; if a live source has moved, update `DATASETS_AND_LINKS.csv` and rerun the relevant data-fetch step without changing the derived-output filenames.
-- Repository DOI is not assigned in this source tree. Mint it from a tagged GitHub release through Zenodo or another archive.
+- Versioned repository archives should be minted from tagged GitHub releases through Zenodo or another archive.

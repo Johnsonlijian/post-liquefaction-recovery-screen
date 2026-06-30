@@ -6,11 +6,12 @@ Public reproducibility package for the manuscript:
 
 Author: Lijian REN, Inner Mongolia University of Technology / Hohai University.
 
-This repository contains the public code, derived tables, and generated figures for a demand-referenced post-liquefaction recovery screen and a Canterbury sequence field test. The manuscript is under submission preparation; this repository does not contain active manuscript files, cover letters, reviewer material, or raw third-party data.
+This repository contains the public code, derived tables, generated figures, and effective-stress simulation support files for a demand-referenced post-liquefaction recovery screen and a Canterbury sequence field test. The manuscript is under submission preparation; this repository does not contain active manuscript files, cover letters, review correspondence, or raw third-party data.
 
 ## Contents
 
 - `analysis/`: Python analysis and figure-generation scripts.
+- `opensees_campaign/`: OpenSees/PM4Sand effective-stress simulation scripts and small derived simulation outputs used for the simulation figure.
 - `outputs/`: derived non-sensitive tables and module summaries used to document the analysis chain.
 - `figures/`: generated figure exports in PDF/PNG.
 - `data/parquet_coord_bridge.csv`: derived coordinate bridge table used by the open pipeline.
@@ -36,13 +37,14 @@ pip install -r requirements.txt
 python analysis/fig1_mechanism.py
 python analysis/fig2_evidence.py
 python analysis/graphical_abstract.py
+python opensees_campaign/fig_simulation.py
 ```
 
-The figure scripts above regenerate the included submitted figure exports from fixed values and derived outputs. Full analytical reruns require the external data listed in `DATASETS_AND_LINKS.csv`.
+The figure scripts above regenerate the included submitted figure exports from fixed values and derived outputs. Full analytical reruns require the external data listed in `DATASETS_AND_LINKS.csv`; rerunning the nonlinear OpenSees sweeps also requires `openseespy`.
 
 ## Citation
 
-Use `CITATION.cff` for software citation metadata. Cite the input CPTu dataset separately using DOI `10.5281/zenodo.20839217`. A code archive DOI should be minted from a GitHub release through Zenodo once repository archiving is enabled.
+Use `CITATION.cff` for software citation metadata. Cite the input CPTu dataset separately using DOI `10.5281/zenodo.20839217`. Versioned code releases are archived from GitHub through Zenodo when the release workflow is enabled.
 
 ## License
 

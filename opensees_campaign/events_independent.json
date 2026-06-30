@@ -1,0 +1,38 @@
+[
+ {
+  "name": "Darfield Sep10",
+  "scale": 0.55,
+  "svp0": 64.8,
+  "peak_ru": 1.001,
+  "settle_mm": 5.33,
+  "sv_recov": 61.2,
+  "sec": 47.0
+ },
+ {
+  "name": "Christchurch Feb11",
+  "scale": 1.1,
+  "svp0": 64.8,
+  "peak_ru": 1.002,
+  "settle_mm": 3.85,
+  "sv_recov": 20.5,
+  "sec": 604.0
+ },
+ {
+  "name": "June 2011",
+  "scale": 0.65,
+  "svp0": 64.8,
+  "peak_ru": 1.002,
+  "settle_mm": 8.2,
+  "sv_recov": 62.7,
+  "sec": 54.0
+ },
+ {
+  "name": "Dec 2011",
+  "scale": 0.55,
+  "svp0": 64.8,
+  "peak_ru": 1.001,
+  "settle_mm": 5.33,
+  "sv_recov": 61.2,
+  "sec": 46.0
+ }
+]

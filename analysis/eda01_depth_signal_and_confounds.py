@@ -12,7 +12,7 @@ Questions:
   2. Depth dependence of dqc1N (mechanism: drainage/reconsolidation -> depth).
   3. Soil-type (Ic) dependence of dqc1N (mechanism: fines control kinetics).
   4. Regression-to-the-mean confound: is dqc1N driven by low pre_qc1N-
-     (Critical reviewer attack: low initial -> apparent "recovery".)
+     (Diagnostic concern: low initial state can create apparent "recovery".)
   5. Time dependence after controlling for depth/Ic/initial state.
   6. Within-coordinate (true repeat) time trajectories.
 """
