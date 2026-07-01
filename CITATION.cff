@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or derived outputs, please cite this repository and the associated manuscript/data record."
 title: "Post-liquefaction recovery screen"
-version: "0.2.3"
+version: "0.2.4"
 date-released: 2026-07-01
 repository-code: "https://github.com/Johnsonlijian/post-liquefaction-recovery-screen"
 license: MIT

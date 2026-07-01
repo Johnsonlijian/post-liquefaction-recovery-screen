@@ -64,7 +64,7 @@ gs = fig.add_gridspec(
     2,
     2,
     left=0.080,
-    right=0.985,
+    right=0.970,
     bottom=0.090,
     top=0.885,
     hspace=0.560,
@@ -116,9 +116,10 @@ axB.text(tt[-1] * 0.97, 1.03, r"liquefaction ($r_u\!\to\!1$)", ha="right", va="b
 axB2 = axB.twinx()
 axB2.plot(tt, sv_d, color=C_BASE, lw=1.2, label=r"$\sigma'_v$")
 axB2.set_ylabel("")
-axB2.tick_params(axis="y", colors=C_BASE)
+axB2.tick_params(axis="y", colors=C_BASE, right=False, labelright=False)
 axB2.set_ylim(-3, 70)
-axB.text(0.98, 0.08, r"$\sigma'_v$ (kPa)", transform=axB.transAxes, ha="right", va="bottom", color=C_BASE, fontsize=6.2)
+axB2.spines["right"].set_visible(False)
+axB.text(0.92, 0.08, r"$\sigma'_v$ (kPa)", transform=axB.transAxes, ha="right", va="bottom", color=C_BASE, fontsize=6.2)
 axB.set_title("(B)  Effective-stress collapse under one event", fontsize=7.0, loc="left", fontweight="bold")
 axB.annotate(
     "post-event reconsolidation:\n$\\sigma'_v$ recovers to ~94%, but\ndensification only ~0.1% / event",
@@ -200,7 +201,7 @@ fig.suptitle(
     fontweight="bold",
 )
 for ext in ("png", "pdf"):
-    fig.savefig(SCR / f"Fig_simulation.{ext}", dpi=210)
+    fig.savefig(SCR / f"Fig_simulation.{ext}", dpi=600 if ext == "png" else 300)
 print(
     "saved Fig_simulation.png/pdf | CRR15:",
     {round(k, 2): round(v, 3) for k, v in CRR.items()},
