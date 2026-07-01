@@ -1,7 +1,7 @@
 """Figure 1 - physically concrete mechanism figure for the EG paper.
 
 Narrative left-to-right: liquefiable ground + CPT -> earthquake -> two
-processes (H1 recovery / H2 susceptibility) -> demand-referenced recovery
+processes (H1 recovery / H2 prior-manifestation signal) -> demand-referenced recovery
 screen (rebuildable vs required reserve; the gap never closes).
 """
 from pathlib import Path
@@ -113,7 +113,7 @@ axM.text(0.50, 0.68, "after liquefaction", fontsize=7.0, color=C["ink"], ha="cen
 axM.annotate("", xy=(0.64, 0.92), xytext=(0.44, 0.64), arrowprops=dict(arrowstyle="->", color=C["rec"], lw=1.6))
 axM.text(0.50, 0.99, "H1  slow recovery\n(ageing, reconsolidation)", fontsize=6.4, color=C["rec"], ha="center", va="top", weight="bold")
 axM.annotate("", xy=(0.64, 0.28), xytext=(0.44, 0.56), arrowprops=dict(arrowstyle="->", color=C["gray"], lw=1.6))
-axM.text(0.50, 0.20, "H2  susceptibility\nchange?  (paradox,\nnot resolvable)", fontsize=6.4, color=C["gray"], ha="center", va="top")
+axM.text(0.50, 0.20, "H2  prior-manifestation\nsignal?  (paradox,\nnot stable)", fontsize=6.2, color=C["gray"], ha="center", va="top")
 
 # Right: demand-referenced recovery screen.
 axr = fig.add_axes([0.520, row_y, 0.430, row_h])
@@ -179,8 +179,9 @@ fig.add_artist(
         lw=1.0,
     )
 )
-fig.text(0.505, 0.073, "The deficit never closes within a sequence, and no susceptibility change is resolvable", fontsize=7.6, ha="center", va="center", color=C["ok"], weight="bold")
-fig.text(0.505, 0.045, "$\\rightarrow$  re-liquefaction is governed by seismic demand", fontsize=7.6, ha="center", va="center", color=C["ok"], weight="bold")
+fig.text(0.505, 0.087, "The deficit never closes within a sequence", fontsize=7.6, ha="center", va="center", color=C["ok"], weight="bold")
+fig.text(0.505, 0.061, "field test: no stable prior-manifestation signal", fontsize=7.2, ha="center", va="center", color=C["ok"], weight="bold")
+fig.text(0.505, 0.035, "$\\rightarrow$  re-liquefaction is governed by seismic demand", fontsize=7.2, ha="center", va="center", color=C["ok"], weight="bold")
 
 fig.savefig(OUT / "Fig1_mechanism.png", dpi=600, facecolor="white")
 fig.savefig(OUT / "Fig1_mechanism.pdf", facecolor="white")

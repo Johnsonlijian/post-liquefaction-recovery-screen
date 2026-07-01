@@ -43,10 +43,10 @@ ax.set_title("a  Recovery screen", loc="left")
 ax = fig.add_axes([0.420, 0.21, 0.300, 0.63])
 rows = [("Demand  (all eras, $q_c$ ctrl)", 3.14, 1.99, 4.96, C["dem"], "845"),
         ("LSN (AUC 0.61)", 1.06, 1.03, 1.10, C["rec"], "845"),
-        ("prior-liq: pre, LSN", 1.18, 0.64, 2.18, C["gray"], "300"),
-        ("prior-liq: all, LSN", 0.50, 0.30, 0.82, C["gray"], "845"),
-        ("prior-liq: all, $q_c$", 1.24, 0.65, 2.38, C["gray"], "845"),
-        ("prior-liq: pre, $q_c$", 4.57, 1.97, 10.62, C["gray"], "300")]
+        ("prior-manif.: pre, LSN", 1.18, 0.64, 2.18, C["gray"], "300"),
+        ("prior-manif.: all, LSN", 0.50, 0.30, 0.82, C["gray"], "845"),
+        ("prior-manif.: all, $q_c$", 1.24, 0.65, 2.38, C["gray"], "845"),
+        ("prior-manif.: pre, $q_c$", 4.57, 1.97, 10.62, C["gray"], "300")]
 ax.axvspan(0.7, 1.45, color="0.87", alpha=0.7, zorder=0)
 labs = []
 for i, (lab, o, lo, hi, c, n) in enumerate(rows):
@@ -57,7 +57,7 @@ ax.axvline(1, color="0.4", lw=0.8, ls="--")
 ax.set_xscale("log"); ax.set_xlim(0.25, 21); ax.set_ylim(0.4, len(rows) + 0.6)
 ax.set_yticks([y for y, _ in labs]); ax.set_yticklabels([l for _, l in labs], fontsize=5.9)
 ax.set_xlabel("odds ratio for Feb-2011 re-liquefaction", fontsize=7.2); ax.tick_params(axis="x", labelsize=6.6)
-ax.set_title("b  Demand drives; prior-liq null", loc="left")
+ax.set_title("b  Demand controls", loc="left")
 
 # ----------------------------------------------- (c) identifiability
 ax = fig.add_axes([0.790, 0.21, 0.198, 0.63])

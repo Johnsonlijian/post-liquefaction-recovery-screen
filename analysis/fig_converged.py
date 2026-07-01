@@ -32,10 +32,10 @@ ax.text(11.7, 0.745, "gap never closes", color=C["dem"], fontsize=6.0, ha="cente
 ax.annotate("H1: slow recovery\n(rebuild too slow)", xy=(8.0, floor + rate * (8.0 - 5.6)),
             xytext=(9.3, 0.255), fontsize=6.0, color=C["sus"], ha="center", va="center",
             arrowprops=dict(arrowstyle="->", color=C["sus"], lw=0.8))
-ax.annotate("H2: susceptibility\nshift- (paradox, +/-)", xy=(5.6, floor),
+ax.annotate("H2: prior-manifestation\nsignal? (paradox)", xy=(5.6, floor),
             xytext=(2.5, 0.66), fontsize=6.0, color=C["dem"], ha="center", va="center",
             arrowprops=dict(arrowstyle="->", color=C["dem"], lw=0.8))
-ax.text(8.2, 0.10, "finding: recovery too slow + no resolvable\nsusceptibility change -> demand sets re-liquefaction",
+ax.text(8.2, 0.10, "finding: recovery too slow + no stable\nprior-manifestation signal -> demand sets re-liquefaction",
         fontsize=6.0, ha="center", va="center", color=C["ok"], weight="bold",
         bbox=dict(boxstyle="round,pad=0.3", fc="#eaf6ea", ec=C["ok"], lw=0.8))
 ax.set_xlim(-1, 17.4); ax.set_ylim(0.0, 1.16); ax.set_yticks([])

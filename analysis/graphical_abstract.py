@@ -86,7 +86,7 @@ ax2.text(
 ax2.text(0.0, 0.635, "No - far too slow to matter", fontsize=13.5, weight="bold", color=C["dem"], va="top")
 bullets = [
     ("Recovery adds only ~15-25 milli-g/yr", C["sus"]),
-    ("No resolvable susceptibility change", C["ink"]),
+    ("No stable prior-manifestation signal", C["ink"]),
     ("Re-liquefaction driven by seismic demand", C["ok"]),
 ]
 y = 0.45
